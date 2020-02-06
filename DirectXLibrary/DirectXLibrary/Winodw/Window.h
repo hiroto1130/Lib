@@ -12,7 +12,7 @@ public:
 		InitializeWindowClass(hInst, window_name);
 	}
 
-	BOOL Create(HWND& hWnd, const INT WindowWidth, const INT WindowHight);
+	BOOL Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHight);
 
 private:
 

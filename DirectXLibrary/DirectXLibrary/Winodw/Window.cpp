@@ -20,7 +20,7 @@ VOID Window::InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_na
 
 }
 
-BOOL Window::Create(HWND& hWnd, const INT WindowWidth, const INT WindowHight)
+BOOL Window::Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHeight)
 {
 	hWnd = CreateWindow(wndclass.lpszClassName, wndclass.lpszClassName, WS_OVERLAPPEDWINDOW, 0, 0, WindowWidth, WindowHight, NULL, NULL, wndclass.hInstance, NULL);
 

@@ -11,7 +11,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, int iCmdSh
 
 	Window* window = new Window(hInst, "Test");
 
-	window->Create(hWnd, 640, 420);
+	window->Generate(hWnd, 640, 420);
 
 	while (msg.message != WM_QUIT)
 	{
