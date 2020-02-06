@@ -4,6 +4,8 @@
 #include <windows.h>
 #include <d3d9.h>
 
+#include "../RectSize/RectSize.h"
+
 class Window
 {
 public:
@@ -12,11 +14,18 @@ public:
 		InitializeWindowClass(hInst, window_name);
 	}
 
+	/**
+	 Windoiw生成関数
+	 
+	 */
 	BOOL Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHight);
 
 private:
 
+	//! WNDCLASSEX のインスタンス
 	WNDCLASSEX  wndclass;
+
+	RectSize* WindowSize = new RectSize(640,480);
 
 	VOID InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_name);
 

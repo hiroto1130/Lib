@@ -22,12 +22,15 @@ VOID Window::InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_na
 
 BOOL Window::Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHeight)
 {
-	hWnd = CreateWindow(wndclass.lpszClassName, wndclass.lpszClassName, WS_OVERLAPPEDWINDOW, 0, 0, WindowWidth, WindowHight, NULL, NULL, wndclass.hInstance, NULL);
+	hWnd = CreateWindow(wndclass.lpszClassName, wndclass.lpszClassName, WS_OVERLAPPEDWINDOW, 0, 0, WindowWidth, WindowHeight, NULL, NULL, wndclass.hInstance, NULL);
 
 	if (hWnd == NULL)
 	{
 		return FALSE;
 	}
+
+	WindowSize->Width = WindowWidth;
+	WindowSize->Height = WindowHeight;
 
 	ShowWindow(hWnd, SW_SHOW);
 
