@@ -142,6 +142,7 @@
     <ClCompile Include="Winodw\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="RectSize\RectSize.h" />
     <ClInclude Include="Winodw\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
