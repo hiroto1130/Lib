@@ -29,8 +29,8 @@ BOOL Window::Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHeight)
 		return FALSE;
 	}
 
-	WindowSize->Width = WindowWidth;
-	WindowSize->Height = WindowHeight;
+	WindowSize.Width = WindowWidth;
+	WindowSize.Height = WindowHeight;
 
 	ShowWindow(hWnd, SW_SHOW);
 
@@ -50,4 +50,14 @@ LRESULT CALLBACK Window::WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lPa
 		break;
 	}
 	return DefWindowProc(hWnd, iMsg, wParam, lParam);
+}
+
+INT Window::GetWindowWidth()
+{
+	return WindowSize.Width;
+}
+
+INT Window::GetWindowHeight()
+{
+	return WindowSize.Height;
 }

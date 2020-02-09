@@ -18,14 +18,17 @@ public:
 	 Windoiw生成関数
 	 
 	 */
-	BOOL Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHight);
+	BOOL Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHeight);
+
+	INT GetWindowWidth();
+	INT GetWindowHeight();
 
 private:
 
 	//! WNDCLASSEX のインスタンス
 	WNDCLASSEX  wndclass;
 
-	RectSize* WindowSize = new RectSize(640,480);
+	RectSize WindowSize;
 
 	VOID InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_name);
 
