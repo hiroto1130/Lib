@@ -1,6 +1,6 @@
 ﻿#include "Device.h"
 
-BOOL Device::Initialize(const HWND& hInst)
+HRESULT Device::Initialize(const HWND& hInst)
 {
 	//// InitD3d が初期化されているかどうか ////
 
