@@ -5,6 +5,12 @@ class RectSize
 {
 public:
 
+	RectSize()
+	{
+		Width = 0;
+		Height = 0;
+	}
+
 	int Width;
 	int Height;
 

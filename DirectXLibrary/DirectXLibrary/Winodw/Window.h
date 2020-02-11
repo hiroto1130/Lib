@@ -20,15 +20,22 @@ public:
 	 */
 	BOOL Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHeight);
 
-	INT GetWindowWidth();
-	INT GetWindowHeight();
+	static inline void SetWindowSize(const RectSize& rect_size)
+	{
+		WindowSize = rect_size;
+	}
+
+	static inline RectSize GetWindowSize()
+	{
+		return WindowSize;
+	}
 
 private:
 
 	//! WNDCLASSEX のインスタンス
 	WNDCLASSEX  wndclass;
 
-	RectSize WindowSize;
+	static RectSize WindowSize;
 
 	VOID InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_name);
 

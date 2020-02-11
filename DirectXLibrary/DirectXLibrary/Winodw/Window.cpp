@@ -16,6 +16,15 @@ VOID Window::InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_na
 	wndclass.lpszClassName = window_name;
 	wndclass.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 
+	if (WindowSize.Height == 0)
+	{
+		WindowSize.Height = 640;
+	}
+	if (WindowSize.Width == 0)
+	{
+		WindowSize.Width = 480;
+	}
+
 	RegisterClassEx(&wndclass);
 
 }
@@ -50,14 +59,4 @@ LRESULT CALLBACK Window::WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lPa
 		break;
 	}
 	return DefWindowProc(hWnd, iMsg, wParam, lParam);
-}
-
-INT Window::GetWindowWidth()
-{
-	return WindowSize.Width;
-}
-
-INT Window::GetWindowHeight()
-{
-	return WindowSize.Height;
 }
