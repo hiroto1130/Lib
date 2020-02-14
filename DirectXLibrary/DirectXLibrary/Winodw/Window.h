@@ -1,4 +1,4 @@
-﻿#ifndef WINDOW_H
+#ifndef WINDOW_H
 #define WINDOW_H
 
 #include <windows.h>
@@ -6,41 +6,67 @@
 
 #include "../RectSize/RectSize.h"
 
-class Window
+namespace Library
 {
-public:
-	Window(const HINSTANCE hInst, const LPCSTR window_name)
+	class WindowParameter
 	{
-		InitializeWindowClass(hInst, window_name);
-	}
+	public:
 
-	/**
-	 Windoiw生成関数
-	 
-	 */
-	BOOL Generate(HWND& hWnd, const INT WindowWidth, const INT WindowHeight);
+		static inline void GetInstanceHandle(HINSTANCE* pHInstance)
+		{
+			*pHInstance = hInst;
+		}
 
-	static inline void SetWindowSize(const RectSize& rect_size)
+		static inline void SetInstanceHandle(const HINSTANCE& hInstance)
+		{
+			hInst = hInstance;
+		}
+
+		static inline void GetWindowHandle(HWND* hwnd)
+		{
+			*hwnd = hWnd;
+		}
+
+		static inline void SetWindowHandle(const HWND& hwnd)
+		{
+			hWnd = hwnd;
+		}
+
+	private:
+		static HINSTANCE hInst;
+
+		static HWND hWnd;
+
+	};
+
+	class Window
 	{
-		WindowSize = rect_size;
-	}
+	public:
+		Window(const LPCSTR window_name)
+		{
+			Initialize(window_name);
+		}
 
-	static inline RectSize GetWindowSize()
-	{
-		return WindowSize;
-	}
+		/**
+		 Windoiw生�?関数
+		 */
+		BOOL Cenerate(const INT WindowWidth, const INT WindowHeight);
 
-private:
 
-	//! WNDCLASSEX のインスタンス
-	WNDCLASSEX  wndclass;
 
-	static RectSize WindowSize;
+	private:
 
-	VOID InitializeWindowClass(const HINSTANCE hInst, const LPCSTR window_name);
+		//! WNDCLASSEX のインスタンス
+		WNDCLASSEX  wndclass;
 
-	static LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam);
+		RectSize WindowSize;
 
-};
+		VOID Initialize(const LPCSTR window_name);
+
+		static LRESULT CALLBACK WndProc(HWND hWNd, UINT iMsg, WPARAM wParam, LPARAM lParam);
+
+	};
+
+}
 
 #endif

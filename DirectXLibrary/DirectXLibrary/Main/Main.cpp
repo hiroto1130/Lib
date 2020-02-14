@@ -3,15 +3,16 @@
 
 #include "../Winodw/Window.h"
 
+using namespace Library;
+
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, int iCmdShow)
 {
-	HWND hWnd = NULL;
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
 
-	Window* window = new Window(hInst, "Test");
+	Window* window = new Window("Test");
 
-	window->Generate(hWnd, 640, 420);
+	window->Cenerate(640, 420);
 
 	while (msg.message != WM_QUIT)
 	{
