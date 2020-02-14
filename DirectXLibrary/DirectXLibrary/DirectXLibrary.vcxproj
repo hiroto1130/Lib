@@ -94,6 +94,7 @@
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;winmm.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -105,6 +106,7 @@
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;winmm.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -138,10 +140,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Device\Device.cpp" />
     <ClCompile Include="Main\Main.cpp" />
     <ClCompile Include="Winodw\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Device\Device.h" />
     <ClInclude Include="RectSize\RectSize.h" />
     <ClInclude Include="Winodw\Window.h" />
   </ItemGroup>
