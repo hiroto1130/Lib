@@ -47,16 +47,12 @@ namespace Library
 			Initialize(window_name);
 		}
 
-		/**
-		 Windoiw生�?関数
-		 */
 		BOOL Cenerate(const INT WindowWidth, const INT WindowHeight);
 
 
 
 	private:
 
-		//! WNDCLASSEX のインスタンス
 		WNDCLASSEX  wndclass;
 
 		RectSize WindowSize;
