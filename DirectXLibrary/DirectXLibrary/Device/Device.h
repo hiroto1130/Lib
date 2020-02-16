@@ -13,12 +13,7 @@ namespace Library
 	{
 	public:
 
-		Device()
-		{
-			Initialize();
-		}
-
-
+		virtual ~Device() {}
 
 	private:
 
