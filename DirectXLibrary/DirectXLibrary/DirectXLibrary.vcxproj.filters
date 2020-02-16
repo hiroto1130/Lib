@@ -27,6 +27,9 @@
     <ClInclude Include="Device\Device.h">
       <Filter>Device</Filter>
     </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>Device\NewFilter1</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
@@ -37,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="Device\Device.cpp">
       <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Key.cpp">
+      <Filter>Device\NewFilter1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
