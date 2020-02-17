@@ -6,6 +6,7 @@ namespace Library
 
 	HINSTANCE WindowParameter::hInst = nullptr;
 	HWND WindowParameter::hWnd = nullptr;
+	RectSize WindowParameter::WindowSize{ 640,480 };
 
 	VOID Window::Initialize(const LPCSTR window_name)
 	{
@@ -31,20 +32,20 @@ namespace Library
 
 	}
 
-	BOOL Window::Cenerate(const INT WindowWidth, const INT WindowHeight)
+	BOOL Window::Cenerate()
 	{
 		HWND hWnd = nullptr;
 		WindowParameter::GetWindowHandle(&hWnd);
 
-		hWnd = CreateWindow(wndclass.lpszClassName, wndclass.lpszClassName, WS_OVERLAPPEDWINDOW, 0, 0, WindowWidth, WindowHeight, NULL, NULL, wndclass.hInstance, NULL);
+		RectSize WindowSize{ 0,0 };
+		WindowParameter::GetWindowSize(&WindowSize);
+
+		hWnd = CreateWindow(wndclass.lpszClassName, wndclass.lpszClassName, WS_OVERLAPPEDWINDOW, 0, 0, WindowSize.Width, WindowSize.Height, NULL, NULL, wndclass.hInstance, NULL);
 
 		if (hWnd == NULL)
 		{
 			return FALSE;
 		}
-
-		WindowSize.Width = WindowWidth;
-		WindowSize.Height = WindowHeight;
 
 		ShowWindow(hWnd, SW_SHOW);
 

@@ -5,11 +5,7 @@ class RectSize
 {
 public:
 
-	RectSize()
-	{
-		Width = 0;
-		Height = 0;
-	}
+	RectSize(int width,int height) : Width(width),Height(height) {}
 
 	int Width;
 	int Height;

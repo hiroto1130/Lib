@@ -32,11 +32,22 @@ namespace Library
 			hWnd = hwnd;
 		}
 
+		static inline void GetWindowSize(RectSize* rect_size)
+		{
+			*rect_size = WindowSize;
+		}
+
+		static inline void SetWindowSize(const RectSize& rect_size)
+		{
+			WindowSize = rect_size;
+		}
+
 	private:
 		static HINSTANCE hInst;
 
 		static HWND hWnd;
 
+		static RectSize WindowSize;
 	};
 
 	class Window
@@ -47,15 +58,13 @@ namespace Library
 			Initialize(window_name);
 		}
 
-		BOOL Cenerate(const INT WindowWidth, const INT WindowHeight);
+		BOOL Cenerate();
 
 
 
 	private:
 
 		WNDCLASSEX  wndclass;
-
-		RectSize WindowSize;
 
 		VOID Initialize(const LPCSTR window_name);
 
