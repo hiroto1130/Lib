@@ -2,14 +2,14 @@
 #define MOUSE_H
 
 
-#include "../DirectXLibrary/Device/Device.h"
+#include "../Device.h"
 
 namespace Library
 {
 	class Mouse : public Device
 	{
 	public:
-
+		Mouse() { Device::Initialize(); }
 
 	private:
 
