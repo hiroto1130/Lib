@@ -141,15 +141,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Device\Device.cpp" />
+    <ClCompile Include="Device\Input\Key.cpp" />
+    <ClCompile Include="Device\Input\Mouse.cpp" />
     <ClCompile Include="Main\Main.cpp" />
-    <ClCompile Include="Key.cpp" />
-    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Winodw\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Device\Device.h" />
-    <ClInclude Include="Mouse.h" />
-    <ClInclude Include="Key.h" />
+    <ClInclude Include="Device\Input\Key.h" />
+    <ClInclude Include="Device\Input\Mouse.h" />
     <ClInclude Include="RectSize\RectSize.h" />
     <ClInclude Include="Winodw\Window.h" />
   </ItemGroup>

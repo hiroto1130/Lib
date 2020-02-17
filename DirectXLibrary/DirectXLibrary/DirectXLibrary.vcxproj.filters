@@ -16,7 +16,7 @@
     <Filter Include="Device">
       <UniqueIdentifier>{e9473182-a96e-4e00-ae58-a2775af4d533}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Device\NewFilter1">
+    <Filter Include="Device\Input">
       <UniqueIdentifier>{1c24f2e2-a438-44ce-b8cc-ddad5ffa12a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -30,11 +30,11 @@
     <ClInclude Include="Device\Device.h">
       <Filter>Device</Filter>
     </ClInclude>
-    <ClInclude Include="Key.h">
-      <Filter>Device\NewFilter1</Filter>
+    <ClInclude Include="Device\Input\Key.h">
+      <Filter>Device\Input</Filter>
     </ClInclude>
-    <ClInclude Include="Mouse.h">
-      <Filter>Device\NewFilter1</Filter>
+    <ClInclude Include="Device\Input\Mouse.h">
+      <Filter>Device\Input</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -47,11 +47,11 @@
     <ClCompile Include="Device\Device.cpp">
       <Filter>Device</Filter>
     </ClCompile>
-    <ClCompile Include="Key.cpp">
-      <Filter>Device\NewFilter1</Filter>
+    <ClCompile Include="Device\Input\Key.cpp">
+      <Filter>Device\Input</Filter>
     </ClCompile>
-    <ClCompile Include="Mouse.cpp">
-      <Filter>Device\NewFilter1</Filter>
+    <ClCompile Include="Device\Input\Mouse.cpp">
+      <Filter>Device\Input</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
