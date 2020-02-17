@@ -2,7 +2,7 @@
 #define KEY_H
 
 
-#include "../DirectXLibrary/Device/Device.h"
+#include "../Device.h"
 
 namespace Library
 {
