@@ -148,7 +148,9 @@
   <ItemGroup>
     <ClInclude Include="Device\Device.h" />
     <ClInclude Include="Graphic\Graphic.h" />
-    <ClInclude Include="RectSize\RectSize.h" />
+    <ClInclude Include="TextureInformation\Position.h" />
+    <ClInclude Include="TextureInformation\RectSize.h" />
+    <ClInclude Include="TextureInformation\Uv.h" />
     <ClInclude Include="Winodw\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

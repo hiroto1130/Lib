@@ -9,29 +9,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="RectSize">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Device">
       <UniqueIdentifier>{e9473182-a96e-4e00-ae58-a2775af4d533}</UniqueIdentifier>
     </Filter>
     <Filter Include="Graphic">
       <UniqueIdentifier>{bf7d9fc2-44ff-4186-8354-7df3f7ada9c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TextureInformation">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Winodw\Window.h">
       <Filter>Window</Filter>
-    </ClInclude>
-    <ClInclude Include="RectSize\RectSize.h">
-      <Filter>RectSize</Filter>
     </ClInclude>
     <ClInclude Include="Device\Device.h">
       <Filter>Device</Filter>
     </ClInclude>
     <ClInclude Include="Graphic\Graphic.h">
       <Filter>Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureInformation\Position.h">
+      <Filter>TextureInformation</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureInformation\Uv.h">
+      <Filter>TextureInformation</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureInformation\RectSize.h">
+      <Filter>TextureInformation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
