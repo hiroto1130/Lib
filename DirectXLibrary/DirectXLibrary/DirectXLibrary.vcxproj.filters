@@ -16,6 +16,9 @@
     <Filter Include="Device">
       <UniqueIdentifier>{e9473182-a96e-4e00-ae58-a2775af4d533}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graphic">
+      <UniqueIdentifier>{bf7d9fc2-44ff-4186-8354-7df3f7ada9c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Winodw\Window.h">
@@ -27,6 +30,9 @@
     <ClInclude Include="Device\Device.h">
       <Filter>Device</Filter>
     </ClInclude>
+    <ClInclude Include="Graphic\Graphic.h">
+      <Filter>Graphic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main\Main.cpp">
@@ -37,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="Device\Device.cpp">
       <Filter>Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\Graphic.cpp">
+      <Filter>Graphic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,8 +2,6 @@
 #include <d3d9.h>
 
 #include "../Winodw/Window.h"
-#include "../Key.h"
-#include "../Mouse.h"
 
 using namespace Library;
 
@@ -13,11 +11,6 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, int iCmdSh
 	ZeroMemory(&msg, sizeof(msg));
 
 	Window* window = new Window("Test");
-
-	Key key;
-	Mouse mouse;
-
-
 
 	window->Cenerate(640, 420);
 
